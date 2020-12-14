@@ -31,7 +31,7 @@ const Factures: FC<{}> = (): ReactElement => {
       findAll("85292702900011").catch((e: Error) =>
         enqueueSnackbar(e.message, { variant: "error" })
       ).finally(() => {
-        setOpenBackdrop(false)
+        setOpenBackdrop(false);
       });
     }
   }, [findAll, enqueueSnackbar, isLoaded]);

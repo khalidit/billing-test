@@ -1,3 +1,4 @@
+import { Paper } from '@material-ui/core';
 import React, { FC, ReactElement } from 'react';
 
 interface AppLayoutProps {
@@ -11,7 +12,7 @@ const AppLayoutComponent: FC<AppLayoutProps> = (props: AppLayoutProps): ReactEle
   return (
     <>
       {header}
-      <div>{content}</div>
+      <Paper elevation={0} style={{paddingTop: 80, marginLeft: 20}}>{content}</Paper>
       {footer}
     </>
   );

@@ -4,6 +4,8 @@ import Providers from './providers';
 import ErrorBoundary from './components/ErrorBoundary';
 
 import AppLayout from './components/AppLayout';
+import AppHeader from './components/Header/AppHeader';
+import AppFooter from './components/Footer/AppFooter';
 
 const Home = React.lazy(() => import('./pages/Home'));
 const Factures = React.lazy(() => import('./pages/Facture/Read'));
@@ -13,7 +15,7 @@ const App: React.FunctionComponent<{}> = () => {
   return (
     <Providers>
       <AppLayout
-        header={<></>}
+        header={<AppHeader />}
         content={
             <ErrorBoundary>
               <Suspense
@@ -27,7 +29,7 @@ const App: React.FunctionComponent<{}> = () => {
               </Suspense>
             </ErrorBoundary>
         }
-        footer={<></>}
+        footer={<AppFooter />}
       />
     </Providers>
   );
