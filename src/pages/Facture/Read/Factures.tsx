@@ -23,7 +23,7 @@ const Factures: FC<{}> = (): ReactElement => {
   const items: Facture[] = useStoreState((state) => state.factures.items);
   const { enqueueSnackbar } = useSnackbar();
 
-  const [openBackdrop, setOpenBackdrop] = React.useState(false);
+  const [openBackdrop, setOpenBackdrop] = useState(false);
 
   useEffect(() => {
     setOpenBackdrop(true);
@@ -34,7 +34,7 @@ const Factures: FC<{}> = (): ReactElement => {
         setOpenBackdrop(false)
       });
     }
-  }, [findAll]);
+  }, [findAll, enqueueSnackbar, isLoaded]);
 
   if (!isLoaded) {
     return (
