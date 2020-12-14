@@ -38,7 +38,7 @@
     "@material-ui/data-grid": "^4.0.0-alpha.12",
     "@material-ui/icons": "^4.11.2",
     "axios": "0.19.2",
-    "easy-peasy": "3.3.0",
+    "easy-peasy": "^3.3.0",
     "history": "4.10.1",
     "js-cookie": "2.2.1",
     "notistack": "^1.0.2",

@@ -6,7 +6,6 @@ const factureService = Configuration.factureService;
 
 
 const store = createStore(model, {
-  // 👇 provide injections to our store
   injections: { factureService },
 });
 

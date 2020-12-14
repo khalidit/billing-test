@@ -64,7 +64,7 @@ export const facturesModel: FacturesModel = {
     try {
       const { factureService } = injections;
       const facture = await factureService.createOrUpdate(payload);
-      actions.doUpdate(facture);
+      actions.update(facture);
     } catch (error) {
       throw error;
     }

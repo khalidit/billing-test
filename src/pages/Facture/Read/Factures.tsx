@@ -5,6 +5,7 @@ import FactureList from "./FactureList";
 import Backdrop from "@material-ui/core/Backdrop";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import Facture from "../../../domains/Facture";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -19,7 +20,7 @@ const Factures: FC<{}> = (): ReactElement => {
   const classes = useStyles();
   const findAll = useStoreActions((actions) => actions.factures.findAll);
   const isLoaded: boolean = useStoreState((state) => state.factures.isLoaded);
-  const items: boolean = useStoreState((state) => state.factures.items);
+  const items: Facture[] = useStoreState((state) => state.factures.items);
   const { enqueueSnackbar } = useSnackbar();
 
   const [openBackdrop, setOpenBackdrop] = React.useState(false);

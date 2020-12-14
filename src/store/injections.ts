@@ -1,6 +1,6 @@
 /* istanbul ignore file */
-import { IUserInfo } from '../services/userInfo.interface';
+import { IFactureService } from '../services/facture.interface';
 
 export interface Injections {
-  userInfoService: IUserInfo;
+  factureService: IFactureService;
 }
